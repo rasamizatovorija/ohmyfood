@@ -1,0 +1,66 @@
+@import "../base/base";
+
+.restaurants {
+  background-color: rgba(246, 246, 246, 1);
+  padding: 4rem 1rem;
+  @media (min-width: 1024px) {
+    padding: 4rem 13rem;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+  .container-restaurant {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    @media (min-width: 1024px) {
+      display: flex;
+      gap: 4rem 7rem;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .card {
+      position: relative;
+      height: 250px;
+      @media (min-width: 1024px) {
+        width: 44%;
+      }
+      .green-info {
+        color: $green-font;
+        background-color: $green-background;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 1rem;
+        padding: 0.5rem;
+        border-radius: 0.2rem;
+      }
+      img {
+        border-top-right-radius: 1rem;
+        border-top-left-radius: 1rem;
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+      }
+      .info-card {
+        background-color: white;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        padding: 1rem;
+        p {
+          font-weight: 700;
+          font-size: 1.2rem;
+          margin-bottom: 0.4rem;
+        }
+        span {
+          font-size: 1.1rem;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

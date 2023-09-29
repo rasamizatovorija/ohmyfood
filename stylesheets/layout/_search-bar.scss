@@ -1,0 +1,13 @@
+@import '../base/base';
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+  padding: 9px 0px;
+  background-color: $grey-color;
+  color: $grey-color-font;
+}

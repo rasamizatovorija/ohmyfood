@@ -1,0 +1,28 @@
+@import "../base/base";
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: $grey-background-footer;
+  color: $white;
+  padding: 1.5rem;
+  @media (min-width:769px) {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 6rem;
+  }
+  h3 {
+    font-family: Shrikhand, sans-serif;
+  }
+  .subtitles-footer {
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    @media (min-width: 769px) {
+      flex-direction: row;
+      gap: 2rem;
+    }
+  }
+}

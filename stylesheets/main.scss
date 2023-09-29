@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+
+@import "abstracts/variables", "abstracts/functions", "abstracts/mixins";
+
+
+@import "vendors/normalize";
+
+
+@import "./base/base",  "base/typography";
+
+
+@import "layout/header", "layout/footer", "layout/search-bar",
+  "layout/explorer", 'layout/fonctionnement','layout/restaurants', './layout/menu-palette-du-gout';
+
+
+@import "components/button";
+
+
+@import "pages/home";
+
+

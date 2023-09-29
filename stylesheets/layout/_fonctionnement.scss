@@ -1,0 +1,47 @@
+@import "../base/base";
+
+.fonctionnement {
+  padding: 3rem 1.5rem;
+  @media (min-width:769px) {
+    padding: 3rem 13rem;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0rem;
+    .card {
+      p{
+        font-weight: 500;
+      }
+      .icon-card {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        left: -0.5rem;
+        gap: 1.5rem;
+        i {
+          color: $grey-icon;
+        }
+        span {
+          background-color: $violet-color;
+          color: $white;
+          text-align: center;
+          width: 20px;
+          height: 20px;
+          border-radius: 10px;
+        }
+      }
+      display: flex;
+      position: relative;
+      width: 320px;
+      height: 73px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    }
+  }
+}

@@ -1,0 +1,147 @@
+@import "../base/base";
+
+.menuSection {
+  border-radius: 3rem 3rem 0 0;
+  background-color: rgb(246, 246, 246);
+  padding: 2.5rem 1.2rem;
+  position: relative;
+  margin-top: -3.5rem;
+  @media (min-width: 1024px) {
+    padding: 2.5rem 15rem;
+    margin: -3.5rem 10rem 0rem 10rem;
+  }
+  .menuTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 1rem;
+    .heartTransition {
+      &:hover .fasHeart {
+        opacity: 100%;
+      }
+      &:hover .farHeart {
+        opacity: 0;
+      }
+      .fasHeart {
+        color: transparent;
+        background-image: $gradient-color;
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0%;
+        transition: opacity 0.5s ease;
+      }
+      i {
+        font-size: 1.5rem;
+        position: absolute;
+        top: 3rem;
+      }
+    }
+    h3 {
+      font-family: Shrikhand, sans-serif;
+      font-size: 1.7rem;
+    }
+  }
+  .menuComplet {
+    .firstMenu {
+      margin: 2rem 0rem;
+      h2 {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        position: relative;
+      }
+      h2::after {
+        content: "";
+        width: 2.5rem;
+        height: 0.2rem;
+        background-color: #99e2d0;
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0rem;
+      }
+      .menuItem {
+        display: flex;
+        background-color: white;
+        border-radius: 1rem;
+        margin: 1rem 0rem;
+        box-shadow: $box-shadow;
+        overflow: hidden;
+        animation: itemAnimation 0.5s ease 0s 1 normal forwards;
+        @keyframes itemAnimation {
+          0% {
+            opacity: 0;
+            transform: scale(1.4);
+          }
+        
+          100% {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+        &:hover .checkIcon {
+          margin-right: 0rem;
+        }
+        .itemName {
+          display: flex;
+          flex-direction: column;
+          gap: 0.2rem;
+          padding: 1rem;
+          flex: 1;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          animation: openingItem 2s;
+        
+          .itemMainName {
+            font-weight: 500;
+            font-size: 18px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          .itemSubName {
+            font-weight: 300;
+            font-size: 15px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+        .itemPrice {
+          display: flex;
+          align-items: flex-end;
+          font-weight: 700;
+          padding: 1rem;
+        }
+        .checkIcon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 4rem;
+          background-color: #99e2d0;
+          margin-right: -4rem;
+          transition: margin-right 0.5s;
+          i {
+            aspect-ratio: 1;
+            width: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+            color: #99e2d0;
+            background-color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.delivery-button {
+  display: flex;
+  justify-content: center;
+  button {
+    padding: 1rem 2.5rem;
+  }
+}

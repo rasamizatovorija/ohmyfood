@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .head-title {
   position: relative;
   font-family: Shrikhand;
@@ -66,7 +71,7 @@
   text-align: center;
   font-weight: 500;
   padding: 9px 0px;
-  background-color: rgb(246, 246, 246);
+  background-color: rgb(234, 234, 234);
   color: rgb(53, 53, 53);
 }
 
@@ -140,17 +145,13 @@
     padding: 4rem 13rem;
   }
 }
-.restaurants a {
-  text-decoration: none;
-  color: black;
-}
 .restaurants h2 {
   margin-bottom: 1.5rem;
 }
 .restaurants .container-restaurant {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 @media (min-width: 1024px) {
   .restaurants .container-restaurant {
@@ -192,86 +193,165 @@
   border-bottom-right-radius: 1rem;
   padding: 1rem;
 }
+.restaurants .container-restaurant .card .info-card .heartTransition:hover .fasHeart {
+  opacity: 100%;
+}
+.restaurants .container-restaurant .card .info-card .heartTransition .fasHeart {
+  color: transparent;
+  background-image: var(--Button-Gradient, linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%));
+  -webkit-background-clip: text;
+  opacity: 0%;
+  transition: opacity 0.5s ease;
+}
+.restaurants .container-restaurant .card .info-card .heartTransition i {
+  padding: 1rem;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 0;
+  top: 12rem;
+}
 .restaurants .container-restaurant .card .info-card p {
   font-weight: 700;
   font-size: 1.2rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
 }
 .restaurants .container-restaurant .card .info-card span {
   font-size: 1.1rem;
   font-weight: 300;
 }
 
-.menu-container {
-  position: relative;
-  z-index: 1;
+.menuSection {
+  border-radius: 3rem 3rem 0 0;
   background-color: rgb(246, 246, 246);
-  padding: 1.5rem 1rem;
-  border-top-right-radius: 2rem;
-  border-top-left-radius: 2rem;
-  margin-top: -3rem;
+  padding: 2.5rem 1.2rem;
+  position: relative;
+  margin-top: -3.5rem;
 }
-@media (min-width: 1440px) {
-  .menu-container {
-    padding: 3rem 12rem;
-    margin: -3rem 12rem 0rem 12rem;
+@media (min-width: 1024px) {
+  .menuSection {
+    padding: 2.5rem 15rem;
+    margin: -3.5rem 10rem 0rem 10rem;
   }
 }
-@media (min-width: 1440px) {
-  .menu-container .menu-title {
-    display: flex;
-    justify-content: center;
-  }
+.menuSection .menuTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 1rem;
 }
-.menu-container .menu-title h3 {
+.menuSection .menuTitle .heartTransition:hover .fasHeart {
+  opacity: 100%;
+}
+.menuSection .menuTitle .heartTransition:hover .farHeart {
+  opacity: 0;
+}
+.menuSection .menuTitle .heartTransition .fasHeart {
+  color: transparent;
+  background-image: var(--Button-Gradient, linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0%;
+  transition: opacity 0.5s ease;
+}
+.menuSection .menuTitle .heartTransition i {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 3rem;
+}
+.menuSection .menuTitle h3 {
   font-family: Shrikhand, sans-serif;
   font-size: 1.7rem;
 }
-
-.menu-item .subtitles-menu {
-  margin-bottom: 2.5rem;
+.menuSection .menuComplet .firstMenu {
+  margin: 2rem 0rem;
 }
-.menu-item .subtitles-menu h3 {
-  font-weight: 300;
-  text-transform: uppercase;
-  position: relative;
+.menuSection .menuComplet .firstMenu h2 {
   font-size: 1rem;
-  margin: 1.5rem 0rem;
-}
-.menu-item .subtitles-menu h3::after {
-  content: "";
-  width: 40px;
-  height: 3px;
-  background-color: rgb(153, 226, 208);
-  position: absolute;
-  left: 0;
-  top: 24px;
-}
-.menu-item .subtitles-menu .item {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
   position: relative;
-  gap: 0.3rem;
-  margin: 1rem 0rem;
+}
+.menuSection .menuComplet .firstMenu h2::after {
+  content: "";
+  width: 2.5rem;
+  height: 0.2rem;
+  background-color: #99e2d0;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0rem;
+}
+.menuSection .menuComplet .firstMenu .menuItem {
+  display: flex;
   background-color: white;
   border-radius: 1rem;
-  padding: 1rem;
+  margin: 1rem 0rem;
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: itemAnimation 0.5s ease 0s 1 normal forwards;
 }
-.menu-item .subtitles-menu .item .prix {
+@keyframes itemAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.menuSection .menuComplet .firstMenu .menuItem:hover .checkIcon {
+  margin-right: 0rem;
+}
+.menuSection .menuComplet .firstMenu .menuItem .itemName {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1rem;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  animation: openingItem 2s;
+}
+.menuSection .menuComplet .firstMenu .menuItem .itemName .itemMainName {
   font-weight: 500;
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menuSection .menuComplet .firstMenu .menuItem .itemName .itemSubName {
+  font-weight: 300;
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menuSection .menuComplet .firstMenu .menuItem .itemPrice {
+  display: flex;
+  align-items: flex-end;
+  font-weight: 700;
   padding: 1rem;
 }
-.menu-item .subtitles-menu .item p {
-  font-size: 1rem;
-  font-weight: 500;
+.menuSection .menuComplet .firstMenu .menuItem .checkIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  background-color: #99e2d0;
+  margin-right: -4rem;
+  transition: margin-right 0.5s;
 }
-.menu-item .subtitles-menu .item span {
-  font-size: 0.9rem;
-  font-weight: 300;
+.menuSection .menuComplet .firstMenu .menuItem .checkIcon i {
+  aspect-ratio: 1;
+  width: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  color: #99e2d0;
+  background-color: white;
 }
 
 .delivery-button {

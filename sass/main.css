@@ -32,6 +32,49 @@ a {
   object-fit: cover;
 }
 
+.loaderContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  background-color: #ffffff;
+  z-index: 100;
+  animation: fadeout 2s forwards;
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+.loaderContainer .loader {
+  position: fixed;
+  height: 100px;
+  width: 100px;
+  background-color: transparent;
+  border: 16px solid #99e2d0;
+  border-right: 16px solid #9356dc;
+  top: 40%;
+  transform: translateY(-50%);
+  animation: loading 1s infinite ease-out;
+}
+@keyframes loading {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
 .footer-section {
   display: flex;
   flex-direction: column;

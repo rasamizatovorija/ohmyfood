@@ -99,6 +99,9 @@ a {
   flex-direction: column;
   gap: 0.5rem;
 }
+.footer-section .subtitles-footer a {
+  color: white;
+}
 @media (min-width: 769px) {
   .footer-section .subtitles-footer {
     flex-direction: row;

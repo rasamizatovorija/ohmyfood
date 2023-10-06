@@ -20,6 +20,9 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    a {
+      color: white;
+    }
     @media (min-width: 769px) {
       flex-direction: row;
       gap: 2rem;

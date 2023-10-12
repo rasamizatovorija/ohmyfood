@@ -3,7 +3,7 @@
 .restaurants {
   background-color: rgba(246, 246, 246, 1);
   padding: 4rem 1rem;
-  @media (min-width: 1024px) {
+  @media (min-width: 1440px) {
     padding: 4rem 13rem;
   }
   h2 {
@@ -55,6 +55,7 @@
             color: transparent;
             background-image: $gradient-color;
             -webkit-background-clip: text;
+            background-clip: text;
             opacity: 0%;
             transition: opacity 0.5s ease;
           }
